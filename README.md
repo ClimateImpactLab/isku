@@ -139,7 +139,19 @@ transformed = isku.extract_regions(
 
 ## Installation
 
-Install the unreleased bleeding-edge version of the package with:
+Using `pip` you can install this package with
+
+```
+pip install isku
+```
+
+for a `uv` project this is
+
+```
+uv add isku
+```
+
+Install the unreleased and unstable bleeding-edge version of the package with:
 
 ```shell
 pip install git+https://github.com/brews/isku
@@ -159,3 +171,6 @@ Yes.
 
 `isku` is open-source software made available under the terms of either the MIT License or the Apache License 2.0, at your option.
 
+See CONTRIBUTING.md if you would like to contribute.
+
+Changes for each release are summarized in CHANGELOG.md.
