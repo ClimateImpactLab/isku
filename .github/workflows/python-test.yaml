@@ -1,4 +1,4 @@
-name: "Test Python Package"
+name: "Test Python package"
 
 on:
   push:
@@ -41,6 +41,12 @@ jobs:
 
       - name: Test with pytest
         run: uv run pytest -vv --cov-report term-missing --cov-report xml --cov isku
+    
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
 
   package-smoke-test:
     runs-on: ubuntu-latest
