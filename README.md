@@ -21,8 +21,6 @@ Minimalist Python + xarray-based climate impact/damage projection framework for 
 
 ## Example
 
-`isku` has ways to extract regionalized variables from gridded datasets, and project data with a simple statistical model.
-
 ### Projection
 
 Projecting data with a model in `isku` is similar to the preprocess/predict/postprocess workflow you might already be familar with.
