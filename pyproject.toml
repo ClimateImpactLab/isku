@@ -16,11 +16,18 @@ requires = ["uv_build>=0.11.11,<0.12.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
-dev = [
+tests = [
     "numpy>=2.4.4",
     "pytest>=9.0.3",
     "pytest-cov>=7.1.0",
     "ruff>=0.15.12",
     "ty>=0.0.34",
+]
+docs = [
+    "mkdocstrings[python]>=1.0.4",
     "zensical>=0.0.40",
+]
+dev = [
+    { include-group = "docs"},
+    { include-group = "tests"},
 ]
