@@ -5,8 +5,8 @@
 
 Minimalist Python + xarray-based climate impact/damage projection framework for researchers with little time.
 
-> [!CAUTION]
-> This is a prototype. It is likely to change in breaking ways. It might delete all your data. Don't use it in production.
+> [!WARNING]
+> This package is in early development. It is likely to change in breaking ways.
 
 ## Features
 
