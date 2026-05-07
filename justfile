@@ -13,3 +13,11 @@ test:
 
 # Format, lint, and test project
 validate: format lint test
+
+# Build docs site
+build-docs:
+    uv run zensical build
+
+# Start local web server to serve docs site
+serve-docs:
+    uv run zensical serve
