@@ -31,6 +31,8 @@ Anything tagged with "enhancement" and "help wanted" is open to whoever wants to
 
 isku could always use more documentation, whether as part of the official docs, in docstrings, or even on the web in blog posts, articles, and such.
 
+PRs with small corrections to spelling, format or clarity are welcome. The project has designed its documentation to make this process easier for non-technical users to contribute to documentation. 
+
 ### Submit Feedback
 
 The best way to send feedback is to file an issue at https://github.com/brews/isku/issues.
@@ -108,6 +110,27 @@ git push origin name-of-your-bugfix-or-feature
 ```
 
 10. Submit a pull request through the GitHub website.
+
+## Documentation
+
+Documentation is in the `docs/` directory with global configurations in the `.zensical` file. Documentation is rendered with [Zensical](https://zensical.org/) and hosted through GitHub Pages to https://brews.github.io/isku/.
+
+You can build and check any changes or additions you've made to documentation locally on your machine after you've set up your development environment.
+
+Make a clean, validated build of the documentation with
+
+```shell
+just build-docs
+```
+
+You can build and serve the documentation pages locally with
+
+```shell
+just serve-docs
+```
+
+and then view your changes in a web browser by following the on-screen URL.
+
 
 ## Pull Request Guidelines
 
