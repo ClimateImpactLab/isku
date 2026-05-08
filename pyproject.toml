@@ -1,7 +1,7 @@
 [project]
 name = "isku"
 version = "0.1.0"
-description = "Minimalist Python + xarray-based climate impact/damage projection framework for researchers with little time."
+description = "Minimalist Python + xarray-based climate impact projection framework for researchers with little time."
 readme = "README.md"
 authors = [
     { name = "Brewster Malevich", email = "bmalevich@rhg.com" }
