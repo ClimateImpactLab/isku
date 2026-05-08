@@ -6,7 +6,7 @@
 
 ## Why use isku?
 
-`isku` is a minimalist Python + xarray-based climate impact projection framework for researchers with little time.
+isku is a minimalist Python + Xarray-based climate impact projection framework for researchers with little time.
 
 ### Features
 
@@ -18,13 +18,13 @@
 
 * Loosely coupled components and protocols for quick scripts with functions or gnarly OOP-heavy applications.
 
-* Designed around `xarray.Dataset` to work with larger-than-memory datasets and distributed computing (dask!), GPUs, TPUs, streaming datasets.
+* Designed around [Xarray](https://xarray.dev/) to work with larger-than-memory datasets and distributed computing (dask!), GPUs, TPUs, streaming datasets.
 
 * Great for weird ad hoc projects and researchers that love rechunking big data!
 
 ## Installation
 
-`isku` is a Python package [available for download from PyPI](https://pypi.org/project/isku/).
+isku is a Python package [available for download from PyPI](https://pypi.org/project/isku/).
 
 Using `pip` you can install this package with
 

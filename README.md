@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/brews/isku/graph/badge.svg?token=G53WDRL97C)](https://codecov.io/gh/brews/isku)
 [![Documentation](https://github.com/brews/isku/actions/workflows/docs.yml/badge.svg)](https://github.com/brews/isku/actions/workflows/docs.yml)
 
-Minimalist Python + xarray-based climate impact/damage projection framework for researchers with little time.
+Minimalist Python + Xarray-based climate impact projection framework for researchers with little time.
 
 > [!WARNING]
 > This package is in early development. It is likely to change in breaking ways.
@@ -19,7 +19,7 @@ Minimalist Python + xarray-based climate impact/damage projection framework for 
 
 * Loosely coupled components and protocols for quick scripts with functions or gnarly OOP-heavy applications.
 
-* Designed around `xarray.Dataset` to work with larger-than-memory datasets and distributed computing (dask!), GPUs, TPUs, streaming datasets.
+* Designed around [Xarray](https://xarray.dev/) to work with larger-than-memory datasets and distributed computing (dask!), GPUs, TPUs, streaming datasets.
 
 * Great for weird ad hoc projects and researchers that love rechunking big data!
 
@@ -143,13 +143,17 @@ transformed = isku.extract_regions(
 
 ## Installation
 
+isku is a Python package [available for download from PyPI](https://pypi.org/project/isku/).
+
 Using `pip` you can install this package with
 
 ```
 pip install isku
 ```
 
-for a `uv` project this is
+best practice suggest installing the package into a virtual environment.
+
+For a `uv` project this is
 
 ```
 uv add isku
