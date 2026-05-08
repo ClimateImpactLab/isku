@@ -379,6 +379,7 @@ separate_signature = true
 members_order = "source"
 parameter_headings = true
 type_parameter_headings = true
+docstring_section_style = "list"
 show_object_full_path = false
 show_if_no_docstring = true
 show_root_heading = true
