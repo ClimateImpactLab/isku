@@ -2,6 +2,7 @@
 
 [![python-test](https://github.com/brews/isku/actions/workflows/python-test.yaml/badge.svg)](https://github.com/brews/isku/actions/workflows/python-test.yaml)
 [![codecov](https://codecov.io/gh/brews/isku/graph/badge.svg?token=G53WDRL97C)](https://codecov.io/gh/brews/isku)
+[![Documentation](https://github.com/brews/isku/actions/workflows/docs.yml/badge.svg)](https://github.com/brews/isku/actions/workflows/docs.yml)
 
 Minimalist Python + xarray-based climate impact/damage projection framework for researchers with little time.
 
