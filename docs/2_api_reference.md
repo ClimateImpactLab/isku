@@ -1,7 +1,3 @@
----
-icon: lucide/binary
----
-
-# API reference
+# API Reference
 
 ::: isku

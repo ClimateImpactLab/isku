@@ -1,7 +1,3 @@
----
-icon: lucide/signpost
----
-
 # User Guide
 
 !!! warning 

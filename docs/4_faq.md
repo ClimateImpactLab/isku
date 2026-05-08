@@ -1,7 +1,3 @@
----
-icon: lucide/message-circle-question-mark
----
-
 # FAQ
 
 !!! warning 

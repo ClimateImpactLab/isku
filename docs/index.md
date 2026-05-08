@@ -1,8 +1,4 @@
----
-icon: lucide/sparkle
----
-
-# Get started
+# Get Started
 
 !!! warning 
     :lucide-construction: This page is under construction.

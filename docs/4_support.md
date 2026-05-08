@@ -1,7 +1,3 @@
----
-icon: lucide/life-buoy
----
-
 # Support
 
 !!! warning 
