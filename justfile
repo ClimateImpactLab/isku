@@ -16,7 +16,7 @@ validate: format lint test
 
 # Build docs site
 build-docs:
-    uv run zensical build
+    uv run zensical build --clean
 
 # Start local web server to serve docs site
 serve-docs:
