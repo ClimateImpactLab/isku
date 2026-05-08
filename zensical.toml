@@ -73,6 +73,7 @@ extra_javascript = [
 
 repo_name = "brews/isku"
 repo_url = "https://github.com/brews/isku"
+edit_uri = "edit/main/docs/"
 
 [project.validation]
 unresolved_references = true
@@ -145,7 +146,7 @@ features = [
     # will generate a button that allows the user to view the Markdown
     # code for the current page.
     # https://zensical.org/docs/setup/repository/#content-actions
-    # "content.action.view",
+    "content.action.view",
 
     # Code annotations allow you to add an icon with a tooltip to your
     # code blocks to provide explanations at crucial points.
