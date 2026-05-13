@@ -21,4 +21,8 @@ tests = [
   "ty>=0.0.34",
 ]
 docs = ["mkdocstrings[python]>=1.0.4", "zensical>=0.0.41"]
-dev = [{ include-group = "docs" }, { include-group = "tests" }]
+dev = [
+    { include-group = "docs" },
+    { include-group = "tests" },
+    "prek>=0.3.13",
+]
