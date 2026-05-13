@@ -9,7 +9,7 @@ import isku
 
 def test_basic_projection():
     """
-    Basic test running build_projection_workflow() with project().
+    Basic test running build_projection_template() with project().
     """
     predictors = xr.Dataset({"foobar": (["idx"], [0, 0, 0])})
     params = xr.Dataset({"ni": (["idx"], [1, 2, 3])})
@@ -27,7 +27,7 @@ def test_basic_projection():
     def _model(x):
         return (x["foobar"] * 2 + x["ni"]).to_dataset(name="impact")
 
-    test_impact_model = isku.build_projection_workflow(
+    test_impact_model = isku.build_projection_template(
         pre=_pre,
         project=_model,
         post=_post,

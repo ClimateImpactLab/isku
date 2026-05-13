@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- BREAKING: `isku.ExtractionWorkflow` is now `isku.ExtractionTemplate`.
+- BREAKING: `isku.ProjectionWorkflow` is now `isku.ProjectionTemplate`.
+- BREAKING: `isku.build_extraction_workflow` is now `isku.build_extraction_template`.
+- BREAKING: `isku.build_projection_workflow` is now `isku.build_projection_template`.
+- BREAKING: In `isku.extract_regions`, the `workflow` argument is now `template`.
 - Improved README.
 - Improved CONTRIBUTING.
 - Add project URLs to package metadata.

@@ -61,7 +61,7 @@ def _postprocess(ds):
     return ds[["impact"]] + 10
 
 
-test_impact_model = isku.build_projection_workflow(
+test_impact_model = isku.build_projection_template(
     pre=_preprocess,
     project=_linear_impact_model,
     post=_postprocess,
@@ -71,7 +71,7 @@ test_impact_model = isku.build_projection_workflow(
 projected = isku.project(input_data, model=test_impact_model)
 ```
 
-This example uses pure functions to define workflow steps. This can be useful for quick analysis but `isku` also accepts
+This example uses pure functions to define workflow, or template, steps. This can be useful for quick analysis but `isku` also accepts
 custom objects adhering to the select protocols. The intent is that components can be quickly used, ignored, extended or
 replaced as needed by a project.
 
@@ -126,7 +126,7 @@ def _add_ten(ds):
     return ds[["variable1"]] + 10
 
 
-my_extraction_workflow = isku.build_extraction_workflow(
+my_extraction_workflow = isku.build_extraction_template(
     pre=_add_one,  # Before regionalization.
     post=_add_ten,  # After regionalization.
 )
@@ -135,7 +135,7 @@ my_extraction_workflow = isku.build_extraction_workflow(
 # Put it all together to extract regions from gridded data.
 transformed = isku.extract_regions(
     gridded_data,
-    workflow=my_extraction_workflow,
+    template=my_extraction_workflow,
     regions=my_regions,
 )
 ```
