@@ -1,5 +1,4 @@
 # FAQ
 
-!!! warning 
+!!! warning
     :lucide-construction: This page is under construction.
-

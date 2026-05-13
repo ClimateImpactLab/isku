@@ -41,7 +41,7 @@ jobs:
 
       - name: Test with pytest
         run: uv run pytest -vv --cov-report term-missing --cov-report xml --cov isku
-    
+
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v6
         with:
@@ -66,7 +66,7 @@ jobs:
 
       - name: Build
         run: uv build
-      
+
       # Check that basic features work and we didn't miss to include crucial files
       - name: Smoke test (wheel)
         run: uv run --isolated --no-project --with dist/*.whl tests/smoke_test.py

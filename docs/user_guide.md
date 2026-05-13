@@ -1,6 +1,6 @@
 # User Guide
 
-!!! warning 
+!!! warning
     :lucide-construction: This page is under construction.
 
 ### Projecting models
@@ -117,4 +117,3 @@ transformed = isku.extract_regions(
     regions=my_regions,
 )
 ```
-
