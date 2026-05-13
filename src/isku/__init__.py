@@ -1,18 +1,18 @@
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Protocol, Callable
+from typing import Protocol
 
 import xarray as xr
 
-
 __all__ = [
-    "build_extraction_workflow",
-    "extract_regions",
-    "build_projection_workflow",
-    "project",
-    "GridWeightingRegions",
     "ExtractionWorkflow",
-    "RegionExtractor",
+    "GridWeightingRegions",
     "ProjectionWorkflow",
+    "RegionExtractor",
+    "build_extraction_workflow",
+    "build_projection_workflow",
+    "extract_regions",
+    "project",
 ]
 
 

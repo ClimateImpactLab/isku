@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved README.
 - Improved CONTRIBUTING.
 - Add project URLs to package metadata.
+- Various improvement to internal code formatting and style.
 
 ## [0.1.0] - 2026-05-06
 
