@@ -1,6 +1,6 @@
 # Get Started
 
-!!! warning 
+!!! warning
     :lucide-construction: This page is under construction.
 
 
@@ -51,4 +51,3 @@ using `pip` or with a project in `uv`, do
 ```shell
 uv add git+https://github.com/brews/isku
 ```
-

@@ -31,7 +31,7 @@ Anything tagged with "enhancement" and "help wanted" is open to whoever wants to
 
 isku could always use more documentation, whether as part of the official docs, in docstrings, or even on the web in blog posts, articles, and such.
 
-PRs with small corrections to spelling, format or clarity are welcome. The project has designed its documentation to make this process easier for non-technical users to contribute to documentation. 
+PRs with small corrections to spelling, format or clarity are welcome. The project has designed its documentation to make this process easier for non-technical users to contribute to documentation.
 
 ### Submit Feedback
 
@@ -70,10 +70,10 @@ Then, install and activate the environment with:
 uv sync
 ```
 
-4. Install pre-commit to run linters/formatters at commit time:
+4. Install prek to run linters/formatters at commit time:
 
 ```bash
-uv run pre-commit install
+uv run prek install --prepare-hooks
 ```
 
 5. Create a branch for local development:
@@ -86,20 +86,17 @@ Now you can make your changes locally.
 
 6. Don't forget to add test cases for your added functionality to the `tests` directory.
 
-7. When you're done making changes, check that your changes pass the formatting tests.
+7. When you're done making changes, check that your changes pass the lint tests.
 
 ```bash
 just lint
 ```
 
-Now, validate that all unit tests are passing:
+Now, validate that automated tests are passing:
 
 ```bash
 just test
 ```
-
-This requires you to have multiple versions of python installed.
-This step is also triggered in the CI/CD pipeline, so you could also choose to skip this step locally.
 
 9. Commit your changes and push your branch to GitHub:
 

@@ -11,10 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Documentation in docs/ hosted at brews.github.io/isku.
 - Test and test-coverage badges to README.
+- Add pre-commit hooks (via prek) to help developers with format.
 
 ### Changed
 
 - Improved README.
+- Improved CONTRIBUTING.
 - Add project URLs to package metadata.
 
 ## [0.1.0] - 2026-05-06
