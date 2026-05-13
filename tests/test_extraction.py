@@ -10,7 +10,7 @@ import isku
 
 def test_extract_regions():
     """
-    Create simple extraction workflow and test basic region extraction.
+    Create simple extraction template and test basic region extraction.
     """
     input_ds = xr.Dataset({"variable1": (["idx"], [0, 0, 0])})
     expected = xr.Dataset({"variable1": (["idx"], [13.5, 13.5, 13.5])})
@@ -23,7 +23,7 @@ def test_extract_regions():
     def _post(x):
         return x[["variable1"]] + 10
 
-    test_transform = isku.build_extraction_workflow(pre=_pre, post=_post)
+    test_transform = isku.build_extraction_template(pre=_pre, post=_post)
 
     class FakeRegionalization(isku.RegionExtractor):
         """
@@ -35,7 +35,7 @@ def test_extract_regions():
 
     output = isku.extract_regions(
         input_ds,
-        workflow=test_transform,
+        template=test_transform,
         regions=FakeRegionalization(),
     )
 

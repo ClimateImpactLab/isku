@@ -5,25 +5,25 @@ from typing import Protocol
 import xarray as xr
 
 __all__ = [
-    "ExtractionWorkflow",
+    "ExtractionTemplate",
     "GridWeightingRegions",
-    "ProjectionWorkflow",
+    "ProjectionTemplate",
     "RegionExtractor",
-    "build_extraction_workflow",
-    "build_projection_workflow",
+    "build_extraction_template",
+    "build_projection_template",
     "extract_regions",
     "project",
 ]
 
 
-class ExtractionWorkflow(Protocol):
+class ExtractionTemplate(Protocol):
     """
     Template for pre and post region extraction transformation
 
     See Also
     --------
-    build_extraction_workflow: Quickly build extraction workflow from functions for regionalization with pre/post transformations.
-    extract_regions: Apply a workflow to extract a new regionalized dataset from gridded data.
+    build_extraction_template: Quickly build extraction template from functions for regionalization with pre/post transformations.
+    extract_regions: Apply a template to extract a new regionalized dataset from gridded data.
     RegionExtractor: Protocol for regionalizing, or extracting regions from a dataset.
     """
 
@@ -46,8 +46,8 @@ class RegionExtractor(Protocol):
 
     See Also
     --------
-    extract_regions: Apply a workflow to extract a new regionalized dataset from gridded data with pre/post transformations.
-    ExtractionWorkflow: Technical protocol for a workflow with pre/post regionalization transformations.
+    extract_regions: Apply a template to extract a new regionalized dataset from gridded data with pre/post transformations.
+    ExtractionTemplate: Technical protocol for a workflow with pre/post regionalization transformations.
     """
 
     def extract_regions(self, ds: xr.Dataset) -> xr.Dataset:
@@ -59,18 +59,18 @@ class RegionExtractor(Protocol):
 
 # This dataclass is a quick and simple way to get a concrete instance of the protocol.
 @dataclass(frozen=True)
-class _SimpleExtractionWorkflow(ExtractionWorkflow):
+class _SimpleExtractionTemplate(ExtractionTemplate):
     pre_extract: Callable[[xr.Dataset], xr.Dataset]
     post_extract: Callable[[xr.Dataset], xr.Dataset]
 
 
-def build_extraction_workflow(
+def build_extraction_template(
     *, pre: Callable[[xr.Dataset], xr.Dataset], post: Callable[[xr.Dataset], xr.Dataset]
-) -> ExtractionWorkflow:
+) -> ExtractionTemplate:
     """
-    Build a workflow of tranformation steps applied to input gridded data, pre/post regionalization, to create a derived variable as output
+    Build a template of tranformation steps applied to input gridded data, pre/post regionalization, to create a derived variable as output
 
-    This function is a quick and simple way to build an ExtractionWorkflow from two simple functions.
+    This function is a quick and simple way to build an ExtractionTemplate from two simple functions.
 
     These steps should be general. They may contain logic for sanity checks
     on inputs and outputs, calculating derived variables and climate indices,
@@ -81,11 +81,11 @@ def build_extraction_workflow(
 
     See Also
     --------
-    extract_regions: Apply a workflow to extract a new regionalized dataset from gridded data.
-    build_extraction_workflow: Quickly build extraction workflow from functions for regionalization.
-    ExtractionWorkflow: The underlaying protocol for a workflow that extracts a regionalized dataset.
+    extract_regions: Apply a template to extract a new regionalized dataset from gridded data.
+    build_extraction_template: Quickly build extraction template from functions for regionalization.
+    ExtractionTemplate: The underlaying protocol for a workflow that extracts a regionalized dataset.
     """
-    return _SimpleExtractionWorkflow(pre_extract=pre, post_extract=post)
+    return _SimpleExtractionTemplate(pre_extract=pre, post_extract=post)
 
 
 # Use class for segment weights because we're making assumptions/enforcements about the weight data's content and interactions...
@@ -102,8 +102,8 @@ class GridWeightingRegions(RegionExtractor):
 
     See Also
     --------
-    extract_regions: Use SegmentWeights in a workflow to extract new regionalized dataset.
-    build_extraction_workflow: Quickly build extraction workflow from functions for regionalization.
+    extract_regions: Extract new regionalized dataset.
+    build_extraction_template: Quickly build extraction template from functions for regionalization.
     RegionExtractor: Protocol for regionalizing, or extracting regions from a dataset.
     """
 
@@ -133,27 +133,27 @@ class GridWeightingRegions(RegionExtractor):
 
 
 def extract_regions(
-    ds: xr.Dataset, *, workflow: ExtractionWorkflow, regions: RegionExtractor
+    ds: xr.Dataset, *, template: ExtractionTemplate, regions: RegionExtractor
 ) -> xr.Dataset:
     """
-    Use transformations in 'workflow' to extract 'regions' from gridded dataset, 'ds', returning a regionalized dataset
+    Use transformations in 'template' to extract 'regions' from gridded dataset, 'ds', returning a regionalized dataset
 
-    This function specifically does not just regionalize through zonal aggregation. It uses 'workflow' to apply pre/post regionalization transformations to create new datasets and variables.
+    This function specifically does not just regionalize through zonal aggregation. It uses 'template' to apply pre/post regionalization transformations to create new datasets and variables.
 
     See Also
     --------
-    build_extraction_workflow: Quickly build extraction workflow from functions for regionalization.
+    build_extraction_template: Quickly build extraction workflow from functions for regionalization.
     """
-    return workflow.post_extract(regions.extract_regions(workflow.pre_extract(ds)))
+    return template.post_extract(regions.extract_regions(template.pre_extract(ds)))
 
 
-class ProjectionWorkflow(Protocol):
+class ProjectionTemplate(Protocol):
     """
     Template for projecting a model with pre and post processing.
 
     See Also
     --------
-    build_projection_workflow: Build a projection workflow from simple functions.
+    build_projection_template: Build a projection template from simple functions.
     """
 
     def pre_project(self, d: xr.Dataset) -> xr.Dataset:
@@ -177,43 +177,43 @@ class ProjectionWorkflow(Protocol):
 
 # This dataclass is a quick and simple way to get a concrete instance of the protocol.
 @dataclass(frozen=True)
-class _SimpleProjectionWorkflow(ProjectionWorkflow):
+class _SimpleProjectionTemplate(ProjectionTemplate):
     pre_project: Callable[[xr.Dataset], xr.Dataset]
     project: Callable[[xr.Dataset], xr.Dataset]
     post_project: Callable[[xr.Dataset], xr.Dataset]
 
 
-def build_projection_workflow(
+def build_projection_template(
     *,
     pre: Callable[[xr.Dataset], xr.Dataset],
     project: Callable[[xr.Dataset], xr.Dataset],
     post: Callable[[xr.Dataset], xr.Dataset],
-) -> ProjectionWorkflow:
+) -> ProjectionTemplate:
     """
     Use simple functions to quickly build a model to project effects, impacts and/or damages.
 
-    This function is a quick and simple way to build an ProjectionWorkflow from three simple functions.
+    This function is a quick and simple way to build an ProjectionTemplate from three simple functions.
 
     See Also
     --------
-    project: Apply a projection workflow to a dataset.
-    ProjectionWorkflow: Technical ProjectionWorkflow protocol.
+    project: Apply a projection template to a dataset.
+    ProjectionTemplate: Technical ProjectionTemplate protocol.
     """
-    return _SimpleProjectionWorkflow(
+    return _SimpleProjectionTemplate(
         pre_project=pre,
         project=project,
         post_project=post,
     )
 
 
-def project(d: xr.Dataset, *, model: ProjectionWorkflow) -> xr.Dataset:
+def project(d: xr.Dataset, *, model: ProjectionTemplate) -> xr.Dataset:
     """
     Project a dataset of predictors, 'd', with 'model' to return a projected dataset
 
     See Also
     --------
-    build_projection_workflow: Build a projection workflow from simple functions.
-    ProjectionWorkflow: Technical ProjectionWorkflow protocol.
+    build_projection_template: Build a projection template from simple functions.
+    ProjectionTemplate: Technical ProjectionTemplate protocol.
     """
     preprocessed = model.pre_project(d)
     projected = model.project(preprocessed)
