@@ -9,7 +9,7 @@ You can contribute in many ways:
 
 ### Report Bugs
 
-Report bugs at https://github.com/brews/isku/issues
+Report bugs at https://github.com/climateimpactlab/isku/issues
 
 If you are reporting a bug, please include:
 
@@ -35,7 +35,7 @@ PRs with small corrections to spelling, format or clarity are welcome. The proje
 
 ### Submit Feedback
 
-The best way to send feedback is to file an issue at https://github.com/brews/isku/issues.
+The best way to send feedback is to file an issue at https://github.com/climateimpactlab/isku/issues.
 
 If you are proposing a new feature:
 
@@ -110,7 +110,7 @@ git push origin name-of-your-bugfix-or-feature
 
 ## Documentation
 
-Documentation is in the `docs/` directory with global configurations in the `.zensical` file. Documentation is rendered with [Zensical](https://zensical.org/) and hosted through GitHub Pages to https://brews.github.io/isku/.
+Documentation is in the `docs/` directory with global configurations in the `.zensical` file. Documentation is rendered with [Zensical](https://zensical.org/) and hosted through GitHub Pages to https://climateimpactlab.github.io/isku/.
 
 You can build and check any changes or additions you've made to documentation locally on your machine after you've set up your development environment.
 
