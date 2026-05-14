@@ -9,7 +9,7 @@ dependencies = ["xarray>=2026.4.0"]
 urls = { Repository = "https://github.com/climateimpactlab/isku", Documentation = "https://climateimpactlab.github.io/isku" }
 
 [build-system]
-requires = ["uv_build>=0.11.12,<0.12.0"]
+requires = ["uv_build>=0.11.13,<0.12.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
