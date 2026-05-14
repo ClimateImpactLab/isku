@@ -1,8 +1,8 @@
 # isku
 
-[![python-test](https://github.com/brews/isku/actions/workflows/python-test.yaml/badge.svg)](https://github.com/brews/isku/actions/workflows/python-test.yaml)
-[![codecov](https://codecov.io/gh/brews/isku/graph/badge.svg?token=G53WDRL97C)](https://codecov.io/gh/brews/isku)
-[![Documentation](https://github.com/brews/isku/actions/workflows/docs.yml/badge.svg)](https://github.com/brews/isku/actions/workflows/docs.yml)
+[![python-test](https://github.com/climateimpactlab/isku/actions/workflows/python-test.yaml/badge.svg)](https://github.com/climateimpactlab/isku/actions/workflows/python-test.yaml)
+[![codecov](https://codecov.io/gh/climateimpactlab/isku/graph/badge.svg?token=G53WDRL97C)](https://codecov.io/gh/climateimpactlab/isku)
+[![Documentation](https://github.com/climateimpactlab/isku/actions/workflows/docs.yml/badge.svg)](https://github.com/climateimpactlab/isku/actions/workflows/docs.yml)
 
 Minimalist Python + Xarray-based climate impact projection framework for researchers with little time.
 
@@ -162,13 +162,13 @@ uv add isku
 Install the unreleased and unstable bleeding-edge version of the package with:
 
 ```shell
-pip install git+https://github.com/brews/isku
+pip install git+https://github.com/climateimpactlab/isku
 ```
 
 using `pip` or with a project in `uv`, do
 
 ```shell
-uv add git+https://github.com/brews/isku
+uv add git+https://github.com/climateimpactlab/isku
 ```
 
 ## Is this any good?

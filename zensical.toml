@@ -22,20 +22,20 @@ site_description = "Minimalist Python + xarray-based climate impact projection f
 # The site_author attribute. This is used in the HTML head element.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_author
-site_author = "@brews"
+site_author = "@climateimpactlab"
 
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-site_url = "https://brews.github.io/isku"
+site_url = "https://climateimpactlab.github.io/isku"
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
-copyright = """
-Copyright &copy; 2026 Steven B. Malevich
-"""
+# copyright = """
+# Copyright &copy; 2026 Your Name Here
+# """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply
@@ -71,8 +71,8 @@ extra_javascript = [
     "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
 ]
 
-repo_name = "brews/isku"
-repo_url = "https://github.com/brews/isku"
+repo_name = "climateimpactlab/isku"
+repo_url = "https://github.com/climateimpactlab/isku"
 edit_uri = "edit/main/docs/"
 
 [project.validation]

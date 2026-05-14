@@ -9,12 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Documentation in docs/ hosted at brews.github.io/isku.
+- Documentation in docs/ hosted at https://climateimpactlab.github.io/isku.
 - Test and test-coverage badges to README.
 - Add pre-commit hooks (via prek) to help developers with format.
 
 ### Changed
 
+- Move project repository to https://github.com/climateimpactlab/isku. They own this now.
 - BREAKING: `isku.ExtractionWorkflow` is now `isku.ExtractionTemplate`.
 - BREAKING: `isku.ProjectionWorkflow` is now `isku.ProjectionTemplate`.
 - BREAKING: `isku.build_extraction_workflow` is now `isku.build_extraction_template`.
@@ -29,5 +30,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release.
 
-[Unreleased]: https://github.com/brews/isku/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/brews/isku/releases/tag/v0.1.0
+[Unreleased]: https://github.com/climateimpactlab/isku/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/climateimpactlab/isku/releases/tag/v0.1.0

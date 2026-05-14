@@ -43,11 +43,11 @@ uv add isku
 Install the unreleased and unstable bleeding-edge version of the package with:
 
 ```shell
-pip install git+https://github.com/brews/isku
+pip install git+https://github.com/climateimpactlab/isku
 ```
 
 using `pip` or with a project in `uv`, do
 
 ```shell
-uv add git+https://github.com/brews/isku
+uv add git+https://github.com/climateimpactlab/isku
 ```
