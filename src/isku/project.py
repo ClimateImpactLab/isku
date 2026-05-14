@@ -20,19 +20,19 @@ class ProjectionTemplate(Protocol):
     build_projection_template: Build a projection template from simple functions.
     """
 
-    def pre_project(self, d: xr.Dataset) -> xr.Dataset:
+    def pre_project(self, ds: xr.Dataset) -> xr.Dataset:
         """
         Pre-process a dataset before projection
         """
         ...
 
-    def project(self, d: xr.Dataset) -> xr.Dataset:
+    def project(self, ds: xr.Dataset) -> xr.Dataset:
         """
         Create a projection from a dataset
         """
         ...
 
-    def post_project(self, d: xr.Dataset) -> xr.Dataset:
+    def post_project(self, ds: xr.Dataset) -> xr.Dataset:
         """
         Process a projected dataset
         """
@@ -70,7 +70,7 @@ def build_projection_template(
     )
 
 
-def project(d: xr.Dataset, *, model: ProjectionTemplate) -> xr.Dataset:
+def project(ds: xr.Dataset, *, model: ProjectionTemplate) -> xr.Dataset:
     """
     Project a dataset of predictors, 'd', with 'model' to return a projected dataset
 
@@ -79,7 +79,7 @@ def project(d: xr.Dataset, *, model: ProjectionTemplate) -> xr.Dataset:
     build_projection_template: Build a projection template from simple functions.
     ProjectionTemplate: Technical ProjectionTemplate protocol.
     """
-    preprocessed = model.pre_project(d)
+    preprocessed = model.pre_project(ds)
     projected = model.project(preprocessed)
     postprocessed = model.post_project(projected)
 
