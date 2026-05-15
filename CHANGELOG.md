@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Support and testing for Python versions >= 3.12. ([@brews](https://github.com/brews), [PR#33](https://github.com/ClimateImpactLab/isku/pull/33))
+- Installs with xarray versions earlier than 2026.4.0. ([@brews](https://github.com/brews), [PR#33](https://github.com/ClimateImpactLab/isku/pull/33))
+
 ## [0.2.0] - 2026-05-14
 
 ### Added
