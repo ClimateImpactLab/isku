@@ -4,13 +4,10 @@ version = "0.2.0"
 description = "Minimalist Python + xarray-based climate impact projection framework for researchers with little time."
 readme = "README.md"
 authors = [{ name = "Brewster Malevich", email = "bmalevich@rhg.com" }]
-requires-python = ">=3.14"
-dependencies = ["xarray>=2026.4.0"]
+requires-python = ">=3.12"
 urls = { Repository = "https://github.com/climateimpactlab/isku", Documentation = "https://climateimpactlab.github.io/isku" }
 
-[build-system]
-requires = ["uv_build>=0.11.13,<0.12.0"]
-build-backend = "uv_build"
+dependencies = ["xarray"]
 
 [dependency-groups]
 tests = [
@@ -26,6 +23,10 @@ dev = [
     { include-group = "tests" },
     "prek>=0.3.13",
 ]
+
+[build-system]
+requires = ["uv_build>=0.11.13,<0.12.0"]
+build-backend = "uv_build"
 
 [tool.ruff.lint]
 extend-select = [
