@@ -27,6 +27,8 @@ Anything tagged with "bug" and "help wanted" is open to whoever wants to impleme
 Look through the GitHub issues for features.
 Anything tagged with "enhancement" and "help wanted" is open to whoever wants to implement it.
 
+We strongly encourage contributers to discuss new features and changes before submitting PRs.
+
 ### Write Documentation
 
 isku could always use more documentation, whether as part of the official docs, in docstrings, or even on the web in blog posts, articles, and such.
@@ -55,7 +57,7 @@ Please note this documentation assumes you already have `uv`, `just`, and `git` 
 
 ```bash
 cd <directory_in_which_repo_should_be_created>
-git clone git@github.com:YOUR_NAME/isku.git
+git clone git@github.com:YOUR_GH_NAME/isku.git
 ```
 
 3. Now we need to install the environment. Navigate into the directory
@@ -73,7 +75,7 @@ uv sync
 4. Install prek to run linters/formatters at commit time:
 
 ```bash
-uv run prek install --prepare-hooks
+just prepare-hooks
 ```
 
 5. Create a branch for local development:
@@ -133,7 +135,7 @@ and then view your changes in a web browser by following the on-screen URL.
 
 Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include tests.
+1. The pull request should include tests. Please write new tests to cover new behavior and features while ensuring older tests continue to pass.
 
 2. If the pull request adds functionality, the docs should be updated.
-   Put your new functionality into a function with a docstring, and add the feature to the list in `README.md`.
+   Put your new functionality into a function with a docstring.

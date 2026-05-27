@@ -179,6 +179,10 @@ Yes.
 
 `isku` is open-source software made available under the terms of either the MIT License or the Apache License 2.0, at your option.
 
-See CONTRIBUTING.md if you would like to contribute.
+Ask questions about usage or general discussion on the project's [discussion page](https://github.com/ClimateImpactLab/isku/discussions).
 
-Changes for each release are summarized in CHANGELOG.md.
+Please file issues and bugs in the project's [issue tracker](https://github.com/ClimateImpactLab/isku/issues).
+
+Please see the [contributing guide](https://github.com/ClimateImpactLab/isku/blob/main/CONTRIBUTING.md) if you would like to contribute.
+
+Changes for each release are summarized in [the changelog](https://github.com/ClimateImpactLab/isku/blob/main/CHANGELOG.md).
