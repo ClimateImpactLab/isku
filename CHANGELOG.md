@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Minor improvements to README, CONTRIBUTING docs, developer experience. ([@brews](https://github.com/brews), [PR#42](https://github.com/ClimateImpactLab/isku/pull/42))
+
 
 ## [0.3.0] - 2026-05-15
 
