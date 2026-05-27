@@ -21,3 +21,7 @@ build-docs:
 # Start local web server to serve docs site
 serve-docs:
     uv run zensical serve
+
+# Setup prek pre-commit hooks
+prepare-hooks:
+    uv run prek install --prepare-hooks
