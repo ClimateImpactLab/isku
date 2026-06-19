@@ -92,6 +92,8 @@ class GridWeightingRegions(RegionExtractor):
 
     'weights' dataset must have "lat", "lon", "weight", "region".
 
+    These are sometimes called "segment weights".
+
     Raises
     ------
     ValueError
