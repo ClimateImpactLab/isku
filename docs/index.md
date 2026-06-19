@@ -1,9 +1,5 @@
 # Get Started
 
-!!! warning
-    :lucide-construction: This page is under construction.
-
-
 ## Why use isku?
 
 isku is a minimalist Python + Xarray-based climate impact projection framework for researchers with little time.
