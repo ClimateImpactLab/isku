@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Minor improvements to README, CONTRIBUTING docs, developer experience. ([@brews](https://github.com/brews), [PR#42](https://github.com/ClimateImpactLab/isku/pull/42))
+- Mention "segment weights" in `GridWeightingRegions` API docs. ([@brews](https://github.com/brews), [PR#60](https://github.com/ClimateImpactLab/isku/pull/60))
 
 
 ## [0.3.0] - 2026-05-15
