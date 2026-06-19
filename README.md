@@ -6,9 +6,6 @@
 
 Minimalist Python + Xarray-based climate impact projection framework for researchers with little time.
 
-> [!WARNING]
-> This package is in early development. It is likely to change in breaking ways.
-
 ## Features
 
 * Define and apply three-step models to project climate effects, impacts, and damages.
