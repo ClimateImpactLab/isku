@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Minor improvements to README, CONTRIBUTING docs, developer experience. ([@brews](https://github.com/brews), [PR#42](https://github.com/ClimateImpactLab/isku/pull/42))
 - Mention "segment weights" in `GridWeightingRegions` API docs. ([@brews](https://github.com/brews), [PR#60](https://github.com/ClimateImpactLab/isku/pull/60))
+- Improve documentation for `isku.extract_regions`. ([@brews](https://github.com/brews), [PR#73](https://github.com/ClimateImpactLab/isku/pull/73))
 
 
 ## [0.3.0] - 2026-05-15

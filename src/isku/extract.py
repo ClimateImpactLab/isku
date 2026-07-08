@@ -135,12 +135,30 @@ def extract_regions(
     ds: xr.Dataset, *, template: ExtractionTemplate, regions: RegionExtractor
 ) -> xr.Dataset:
     """
-    Use transformations in 'template' to extract 'regions' from gridded dataset, 'ds', returning a regionalized dataset
+    Regionalize a gridded dataset with a template of pre- and post-extraction transformations
 
-    This function specifically does not just regionalize through zonal aggregation. It uses 'template' to apply pre/post regionalization transformations to create new datasets and variables.
+    Parameters
+    ----------
+    ds :
+        A gridded dataset with variables to regionalize and transform.
+    template :
+        A template describing pre- and post-regionalization trasformations to create the output regionalized data.
+    regions :
+        Regions to extract from the gridded dataset.
+
+    Returns
+    -------
+    out :
+        A regionalized dataset.
+
+    Notes
+    -----
+    This function is especially concerned with applying a transformation step before regions are extracted, and applying a transformation after extraction. To extract regions _without_ the surrounding transformations, use the [extract_regions][isku.RegionExtractor.extract_regions] method on whatever was passed for the `regions` argument.
 
     See Also
     --------
-    build_extraction_template: Quickly build extraction workflow from functions for regionalization.
+    [build_extraction_template][isku.build_extraction_template]: Quickly build extraction templates from functions.
+
+    [GridWeightingRegions][isku.GridWeightingRegions]: An example of a [RegionExtractor][isku.RegionExtractor] that can be used for the `regions` argument.
     """
     return template.post_extract(regions.extract_regions(template.pre_extract(ds)))
