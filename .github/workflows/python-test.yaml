@@ -31,7 +31,7 @@ jobs:
           enable-cache: true
           python-version: ${{ matrix.python-version }}
 
-      - uses: actions/setup-python@v6.3.0
+      - uses: actions/setup-python@v7.0.0
         with:
           python-version-file: ".python-version"
 
@@ -72,7 +72,7 @@ jobs:
           enable-cache: true
           python-version: ${{ matrix.python-version }}
 
-      - uses: actions/setup-python@v6.3.0
+      - uses: actions/setup-python@v7.0.0
         with:
           python-version-file: ".python-version"
 
