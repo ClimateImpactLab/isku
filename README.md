@@ -1,5 +1,6 @@
 # isku
 
+[![DOI](https://zenodo.org/badge/1231330187.svg)](https://doi.org/10.5281/zenodo.21540112)
 [![python-test](https://github.com/climateimpactlab/isku/actions/workflows/python-test.yaml/badge.svg)](https://github.com/climateimpactlab/isku/actions/workflows/python-test.yaml)
 [![codecov](https://codecov.io/gh/climateimpactlab/isku/graph/badge.svg?token=G53WDRL97C)](https://codecov.io/gh/climateimpactlab/isku)
 [![Documentation](https://github.com/climateimpactlab/isku/actions/workflows/docs.yml/badge.svg)](https://github.com/climateimpactlab/isku/actions/workflows/docs.yml)
