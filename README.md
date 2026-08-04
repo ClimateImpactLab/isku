@@ -43,6 +43,7 @@ input_data = xr.Dataset(
     }
 )
 
+
 # Define a basic workflow for the projection model, pre/post-processing steps.
 def _preprocess(ds):
     my_coef = ds["coef"] + 1
@@ -114,6 +115,7 @@ my_regions = isku.GridWeightingRegions(
         },
     )
 )
+
 
 # Define workflow with pre/post regionalization transformations.
 def _add_one(ds):
