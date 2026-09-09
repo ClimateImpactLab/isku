@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Releases from v0.4.0 onwards are now archived with a DOI. A badge at the top of the README shows the DOI of the last release. ([@brews](https://github.com/brews), [PR#94](https://github.com/ClimateImpactLab/isku/pull/94))
 
+### Changed
+
+- Stricter type checking from ruff/ty. ([@brews](https://github.com/brews), [PR#125](https://github.com/ClimateImpactLab/isku/pull/125))
+
 ## [0.4.0] - 2026-07-24
 
 ### Added
