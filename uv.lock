@@ -195,7 +195,7 @@ dev = [
     { name = "prek", specifier = ">=0.3.13" },
     { name = "pytest", specifier = ">=9.0.3" },
     { name = "pytest-cov", specifier = ">=7.1.0" },
-    { name = "ruff", specifier = ">=0.15.12" },
+    { name = "ruff", specifier = ">=0.16.0" },
     { name = "ty", specifier = ">=0.0.35" },
     { name = "zensical", specifier = ">=0.0.41" },
 ]
@@ -207,7 +207,7 @@ tests = [
     { name = "numpy", specifier = ">=2.4.4" },
     { name = "pytest", specifier = ">=9.0.3" },
     { name = "pytest-cov", specifier = ">=7.1.0" },
-    { name = "ruff", specifier = ">=0.15.12" },
+    { name = "ruff", specifier = ">=0.16.0" },
     { name = "ty", specifier = ">=0.0.35" },
 ]
 
