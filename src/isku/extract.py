@@ -106,7 +106,7 @@ class GridWeightingRegions(RegionExtractor):
     RegionExtractor: Protocol for regionalizing, or extracting regions from a dataset.
     """
 
-    def __init__(self, weights: xr.Dataset):
+    def __init__(self, weights: xr.Dataset) -> None:
         target_variables = ("lat", "lon", "weight", "region")
         missing_variables = [v for v in target_variables if v not in weights.variables]
         if missing_variables:

@@ -8,7 +8,7 @@ import xarray as xr
 import isku
 
 
-def test_extract_regions():
+def test_extract_regions() -> None:
     """
     Create simple extraction template and test basic region extraction.
     """
@@ -17,10 +17,10 @@ def test_extract_regions():
 
     # Each of the transformation steps should add to the variable.
     # We'll know something basic is off if it doesn't add to `expected`.
-    def _pre(x):
+    def _pre(x: xr.Dataset) -> xr.Dataset:
         return x[["variable1"]] + 1
 
-    def _post(x):
+    def _post(x: xr.Dataset) -> xr.Dataset:
         return x[["variable1"]] + 10
 
     test_transform = isku.build_extraction_template(pre=_pre, post=_post)
@@ -30,7 +30,7 @@ def test_extract_regions():
         Toy implementation of the RegionExtractor protocol
         """
 
-        def extract_regions(self, ds):
+        def extract_regions(self, ds: xr.Dataset) -> xr.Dataset:  # ruff: ignore[no-self-use]
             return ds[["variable1"]] + 2.5
 
     output = isku.extract_regions(
@@ -42,7 +42,7 @@ def test_extract_regions():
     xr.testing.assert_allclose(output, expected)
 
 
-def test_gridweightingregions_region_extraction():
+def test_gridweightingregions_region_extraction() -> None:
     """
     Basic test calling GridWeightingRegions for regionalization with the RegionExtractor protocol.
     """
@@ -81,7 +81,7 @@ def test_gridweightingregions_region_extraction():
     xr.testing.assert_allclose(actual, expected)
 
 
-def test_gridweightingregions_extract_regions_with_extradim():
+def test_gridweightingregions_extract_regions_with_extradim() -> None:
     """
     Basic GridWeightingRegions regionalization test, but if input data has extra time dim.
     """
