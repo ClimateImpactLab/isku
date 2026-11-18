@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Stricter type checking from ruff/ty. ([@brews](https://github.com/brews), [PR#125](https://github.com/ClimateImpactLab/isku/pull/125))
+- Switch prek.toml to .pre-commit.yaml for dependabot updates. ([@brews](https://github.com/brews), [PR#174](https://github.com/ClimateImpactLab/isku/pull/174))
 
 ## [0.4.0] - 2026-07-24
 
